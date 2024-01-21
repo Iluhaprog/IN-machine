@@ -1,0 +1,27 @@
+{
+  "name": "builder",
+  "version": "1.0.0",
+  "description": "This lib allow build description files with microcode into hex files in v2.0 raw. cfbu - cpu firmware builder and uploader.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./converter.js",
+    "upload": "node ./upload-build.js",
+    "open": "node ./open-circuit.js",
+    "start": "node ./index.js"
+  },
+  "keywords": [
+    "HEX",
+    "BIN"
+  ],
+  "author": "Ilya Novak",
+  "license": "ISC",
+  "dependencies": {
+    "as-table": "^1.0.55",
+    "xml2js": "^0.6.2",
+    "yargs": "^17.7.2"
+  },
+  "bin": {
+    "cfbu": "./index.js"
+  }
+}
