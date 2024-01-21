@@ -1,0 +1,19 @@
+{
+  "name": "jmasm-transpiler",
+  "version": "0.0.1",
+  "description": "Transpiler from custom ASM to machine codes for custom PC.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Ilya Novak",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "yargs": "^17.7.2"
+  },
+  "bin": {
+    "jmasm": "./bin/index.js"
+  }
+}

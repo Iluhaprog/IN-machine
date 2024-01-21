@@ -1,0 +1,30 @@
+SET R1 1 
+SET R2 1
+SUM R1 R2 R3
+WT 8193 R3 ; записать результат SUM в RAM 
+
+AND R1 R2 R3
+WT 8194 R3 ; записать результат AND в RAM
+
+OR R1 R2 R3
+WT 8195 R3 ; записать результат OR в RAM
+
+NOT R1 R3
+WT 8196 R3 ; записать результат NOT в RAM
+
+XOR R1 R2 R3
+WT 8197 R3 ; записать результат XOR в RAM
+
+SET R4 0b01
+SHL R4 R5
+WT 8198 R5 ; записать результат SHL в RAM
+
+SET R4 0b010
+SHR R4 R5
+WT 8199 R5 ; записать результат SHR в RAM
+
+
+
+
+
+

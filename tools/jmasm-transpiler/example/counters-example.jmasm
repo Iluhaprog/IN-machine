@@ -1,0 +1,17 @@
+SET R1 0  ; init value
+SET R2 1  ; increment value
+SET R8 3 ; end value
+
+; change end value for correct comparing
+NOT R8
+SET R7 1
+SUM R7 R8 R8 
+
+.do-while-loop
+	SUM R1 R2 R1
+
+	SUM R1 R8 R7
+	JMP_CC .do-while-loop ; do while R1 <= R8
+
+WT 8192 R1		
+

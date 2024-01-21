@@ -1,0 +1,45 @@
+; Инициализация одинаковых значений
+SET R1 22
+SET R2 22
+
+; преобразование значения в R2 в отрицательное, т.е. в -22
+NOT R2
+SET R3 1
+SUM R2 R3 R2
+
+; т.к. теперь в R2 находиться отрицательное значение 
+; здесь вычисляется сумма 22 + (-22) 
+SUM R1 R2 R3
+
+JMP_EQ .when-registers-are-equal ; if R1 == R2
+; else
+WT 8193 R3
+JMP .continue-1 ; пропускаем строки под меткой "when registers are equal"
+
+.when-registers-are-equal
+	SET R4 0b10
+	WT 8194 R4
+
+.continue-1
+SET R1 20
+SET R2 15
+
+NOT R2
+SET R3 1
+SUM R2 R3 R2
+
+SUM R1 R2 R3
+
+JMP_LS .less-or-same ; if R1 <= R2
+; else
+SET R3 1
+WT 8200 R3
+JMP .continue-2
+
+.less-or-same
+	SET R3 2
+	WT 8201 R3
+
+.continue-2
+
+
