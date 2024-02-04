@@ -1,0 +1,16 @@
+{
+  "name": "scheme-environment",
+  "version": "0.0.1",
+  "description": "Core of PC model for using in js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "PC",
+    "emulator"
+  ],
+  "author": "Ilya Novak",
+  "license": "ISC",
+  "type": "module"
+}
