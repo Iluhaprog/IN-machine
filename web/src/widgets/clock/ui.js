@@ -6,7 +6,7 @@ import { Delimiter } from "@/shared/ui/Delimiter";
 import { EClock } from "@/entities/clock/ui";
 import { EClockMode } from "@/entities/clock-mode/ui";
 
-export function FClock () {
+export function WClock () {
     return (
         <ElementWrapper>
             <p className="text-[12px] text-center text-[#404159] px-[2px]">clock</p>
