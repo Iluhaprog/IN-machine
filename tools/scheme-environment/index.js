@@ -43,20 +43,12 @@ function initHandlers() {
             const [_, name] = hookName.split('___');
 
             handler.hooks[name] = function () {
-                element[`perv_outputs`] = {...element.element.outputs};
-
                 element.element[hookName]();
 
-                element[`next_outputs`] = {...element.element.outputs};
+                _handlers[element.element.name].inputs(element.element.outputs);
+                _handlers[element.element.name].outputs(element.element.outputs);
 
-                _changeableValues = {
-                    ..._changeableValues,
-                    ...element.element.outputs,
-                };
-
-                setInputsExcludeOneElement(element);
-
-                runHandlers();
+                tick();
             };
         }        
 
