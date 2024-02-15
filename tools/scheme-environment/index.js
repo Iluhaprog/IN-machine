@@ -42,8 +42,8 @@ function initHandlers() {
         for (const hookName of hookNames) {
             const [_, name] = hookName.split('___');
 
-            handler.hooks[name] = function () {
-                element.element[hookName]();
+            handler.hooks[name] = function (...args) {
+                element.element[hookName](...args);
 
                 _handlers[element.element.name].inputs(element.element.outputs);
                 _handlers[element.element.name].outputs(element.element.outputs);

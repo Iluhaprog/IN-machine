@@ -9,6 +9,21 @@
   @apply visible z-50;
 }
 
+.styled-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 0 10px 10px 0;
+}
+
+.styled-scrollbar::-webkit-scrollbar-track {
+  border-radius: 0 8px 8px 0;
+  background-color: #ffffff;
+}
+
+.styled-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #F3F3F3;
+  border-radius: 0 10px 10px 0;
+}
+
 @tailwind utilities;
 
 :root {

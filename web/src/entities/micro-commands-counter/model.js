@@ -55,6 +55,8 @@ function action() {
 
     saveOpcodeEN1();
     saveOpcodeEN2();
+
+    uploadOpcode();
 }
 
 function count() {
